@@ -1,0 +1,25 @@
+@media only screen and (min-width: 768px) {
+    
+    header h1 {font-size: 2.85rem;}
+    header h2 {font-size: 1.5rem; }
+    
+    #column1 {
+        grid-column-start: 1;
+        grid-column-end: 2;  
+    }
+
+    #column2 {
+        grid-column-start: 2;
+        grid-column-end: 3;  
+    }
+
+    #column3 {
+        grid-column-start: 1;
+        grid-column-end: 3;  
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }        
+} /* end of media query */

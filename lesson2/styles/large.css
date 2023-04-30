@@ -1,0 +1,22 @@
+@media only screen and (min-width: 1024px) {
+    
+    #column1 {
+        grid-column-start: 1;
+        grid-column-end: 2;  
+    }
+
+    #column2 {
+        grid-column-start: 2;
+        grid-column-end: 3;  
+    }
+
+    #column3 {
+        grid-column-start: 3;
+        grid-column-end: 4;  
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }            
+} /* end of media query */
