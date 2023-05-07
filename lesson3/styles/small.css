@@ -1,0 +1,151 @@
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.limited {
+    max-width: 1140px; 
+    margin: 0.1rem auto;
+}
+
+.column {
+    padding: 0; margin: .3rem;
+}
+
+/* header rules */
+
+header div{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	background-color: #0077b6;
+}
+header img{
+	grid-column: 2/3;
+	grid-row: 1/2;	
+	width: 220px;
+	height: auto;
+	margin: 0.7rem;
+}
+
+header h1 {
+	grid-column: 1/4;	
+	grid-row: 2/3;
+	text-align: left;
+	padding: 3rem 0 0 0; 
+	font-size: 1.95rem;   
+}
+
+header h1, header h2, footer section {
+    margin: 0;
+    color: #fff; 
+    font-weight: 300;    
+    text-align: center;
+}
+
+nav {
+	background-color: #023c5b;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+nav div {
+	flex: 1 1 auto;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+nav a:hover {
+	background-color: #00b4d8;
+	color: #90e0ef;
+}
+
+main{
+	background-color: #e4f1f8;
+}
+
+main section h3{
+    background-color: #0077b6;
+	text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 0;
+    color: #fff;    
+}
+
+main > section > ul{
+	background-color: #ceeeff;
+	margin: 0;
+	padding: 1.5rem 3.5rem;
+}
+
+.audience-content{
+	padding: 0.2rem 1rem;
+}
+
+.audience-content p{
+	margin: 0.5rem;
+}
+
+.audience-content li{
+	margin: 0;
+	padding: 0.2rem 0;
+}
+
+main > section > li{		
+	padding: 0.5rem;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.color-typography{
+	text-align: center;
+}
+
+.colors {
+	width: 100%;
+	min-width: 350px;
+	margin: 30px auto;
+	text-align: center;
+  }
+  .colors th {
+	background-color: #0E3458;
+	color:#CAF0F8;
+  }
+  .colors td{
+	width: 25%;
+	height: 3em;
+  }
+  .primary {
+	background-color: #0077b6;
+  }
+  .secondary {
+	background-color: #90e0ef;
+  }
+  .tertiary {
+	background-color: #00b4d8;
+  }
+  .quaternary{
+	background-color: #CAF0F8;
+  }
+
+footer{
+    background-color: #0077b6;
+}
