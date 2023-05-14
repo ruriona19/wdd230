@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="author" content="Roberto Uriona" />
+        <meta name="description"
+          content="Assignment Design Principle Document in WDD 230: Web 
+          Frontend Development at Brigham Young University - Idaho." />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+        <link href="styles/normalize.css" rel="stylesheet">
+        <link href="styles/small.css" rel="stylesheet">
+        <link href="styles/medium.css" rel="stylesheet">
+        <link href="styles/large.css" rel="stylesheet">        
+        <title>Site Purpose | Cochabamba Chamber of Commerce</title>
+    </head>
+    <body>
+        <header class="limited">
+            <div>                
+                <img class="logo" src="images/logo.png" alt="Cochabamba Chamber of Commerce">                                  
+                <h1>Cochabamba</h1>
+                <h2>Chamber of Commerce</h2>
+                <button id="hamburgerBtn">
+                    <span>&#9776; </span>
+                    <span>X</span>
+                </button>
+                <nav>
+                    <ul id="primaryNav">
+                        <li class="active"><a href="./">Discover</a></li>
+                        <li><a href="./">Directory</a></li>
+                        <li><a href="./">Join</a></li>
+                        <li><a href="./">Contact</a></li>
+                    </ul>
+                </nav>
+                <section>                    
+                    <span id="currentDate"></span>                
+                </section>
+            </div>                         
+        </header>            
+        <main class="limited">            
+            <section id="hero">
+                <p>Hero with site name and call to action</p>
+            </section>
+            <section id="event">
+                <p>Event</p>
+            </section>
+            <section id="weather">
+                <p>Weather</p>
+            </section>
+            <section id="newRelease">
+                <p>News Release</p>
+            </section>
+            <section id="join">
+                <p>Join</p>
+            </section>
+            <section id="spotLights">
+                <section id="spotLight1">
+                    <p>SpotLigt 1</p>
+                </section>
+                <section id="spotLight2">
+                    <p>SpotLigt 2</p>
+                </section>
+            </section> 
+        </main>
+        
+        <footer class="limited">
+            <div>
+                <img class="logo" src="images/logo.png" alt="Cochabamba Chamber of Commerce">                                  
+                <h1>
+                    Cochabamba Chamber of Commerce
+                    <br/>
+                    Heroinas Av. #777
+                </h1>
+                <h2>                                        
+                    info@cochabamba.org
+                    <br/>
+                    +(591) 722-56544
+                    <br/>
+                    Location Map
+                </h2>                                         
+                <section id="small">
+                    &copy; <span id="copyrightYearSmall"></span> Cochabamba Chamber<br/>
+                    <strong>Roberto Uriona</strong><br>
+                    WDD 230 Project<br>
+                    Last Modification: <span id="lastUpdatedSmall"></span>                
+                </section>
+                <section id="medium">
+                    &copy; <span id="copyrightYearMedium"></span> | <strong>Roberto Uriona</strong> | Cochabamba Chamber | WDD 230 Project<br>
+                    Last Modification: <span id="lastUpdatedMedium"></span>
+                </section>
+                <section id="large">
+                    &copy; <span id="copyrightYearLarge"></span> | <strong>Roberto Uriona</strong> | Cochabamba Chamber | WDD 230 Project | Last Modification: <span id="lastUpdatedLarge"></span>  
+                </section>
+            </div>
+        </footer>    
+        <script src="scripts/my-scripts.js"></script>     
+    </body>
+</html>

@@ -1,0 +1,43 @@
+@media only screen and (min-width: 1024px) {
+    header button {
+        display: none;
+    }
+   
+    header nav {
+        grid-column: 6/11; 
+        grid-row: 1/2;
+        background-color:inherit;
+    }
+
+    header section {                        
+        font-size: 1.2rem;         
+    }
+
+    nav ul#primaryNav {
+        display: flex;
+        margin-left: 2vw;
+        padding: 1.8rem 0 0 0; 
+    }
+
+    nav ul li a {
+        border: none;
+        padding: .5rem 2rem;
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    nav li.active a {        
+        background-color: inherit;
+        font-weight: 700;
+    }
+    
+    nav a:hover {
+        background-color: rgb(3, 132, 202);        
+        border-color: #fff;
+        color: #fff;
+    }        
+
+    #small { display: none;}
+    #medium { display: none;}
+    #large { display: inline;}
+} /* end of media query */
