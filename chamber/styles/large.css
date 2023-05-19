@@ -2,9 +2,13 @@
     header button {
         display: none;
     }
-   
+    
+    .social a img{
+        margin-top: 0.8rem;	
+    }
+
     header nav {
-        grid-column: 6/11; 
+        grid-column: 7/9; 
         grid-row: 1/2;
         background-color:inherit;
     }
