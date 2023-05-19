@@ -45,8 +45,7 @@
     }
 
     #hero, #event, #weather, #newRelease, #spotLights, #join{
-        grid-column: 1/13;        
-        margin: 0;
+        grid-column: 1/13;             
         color: #0077b6; 
         font-weight: 300;            	
         height: 180px;
@@ -72,8 +71,7 @@
         grid-row: 3/4;
     }
 
-    #spotLight1, #spotLight2{               
-        margin: 0;
+    #spotLight1, #spotLight2, #spotLight3{        
         color: #0077b6;
         font-weight: 300;        
         height: 160px;
@@ -140,5 +138,6 @@
     #small { display: none;}
     #medium { display: inline;}
     #large { display: none;}
+    #spotLight3 { display: none;}
 
 } /* end of media query */
