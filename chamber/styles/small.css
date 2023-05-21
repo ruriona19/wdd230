@@ -46,8 +46,7 @@ header h1, header h2 {
 	color: #fff;
 	font-weight: 700;
 	grid-column: 2/9;
-	text-align: left;
-	font-style: italic;
+	text-align: left;	
 }
 
 header h1 {	        		
@@ -163,18 +162,13 @@ nav li.active a {
 #hamburgerBtn.open span:nth-child(1) {display: none;}
 #hamburgerBtn.open span:nth-child(2) {display: block;}
 
+/* main rules */
+
 main{	
 	background-color: #e4f1f8;
 }
 
-main section h3{
-    background-color: #0077b6;
-	text-align: center;
-    padding: 0.5rem;
-    width: 100%;
-    margin: 0;
-    color: #fff;    
-}
+
 
 main > section > ul{
 	background-color: #ceeeff;
@@ -182,18 +176,138 @@ main > section > ul{
 	padding: 1.5rem 3.5rem;
 }
 
+main #hero img{
+	width: 100%;
+	height: 100%;
+}
+
 #hero, #event, #weather, #newRelease{
-	margin: 0;
-    color: #0077b6; 
-    font-weight: 300;    
-    text-align: center;	
+    color: #0077b6;
+    font-weight: 300;  
+    text-align: center;
 	height: 180px;
-	background-color: #caf0f8;
+	background-color: #fff;
 	margin: .4rem;
-	padding-top: .2rem;
 	border-width: .0001px;
 	border-style: solid;
-	border-color: #0077b6;	
+	border-color: #0077b6;
+}
+
+#hero{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);	
+}
+
+#hero img{	
+	grid-column: 1/4;
+    grid-row: 1/4;
+}
+
+#hero h1{
+	grid-column: 1/4;
+    grid-row: 1/2;
+	font-size: 1.5em;
+	text-align: left;
+	margin-top: 0.5rem;
+	padding-left: 0.5rem;
+	color:#fff;
+	font-style: italic;
+}
+
+#hero a{
+	grid-column: 1/3;
+    grid-row: 3/4;
+	background-color: #0077b6;
+	text-decoration: none;
+	text-align: center;	
+	font-size: 0.9em;
+	color: #fff;	
+	margin: 1rem 4rem 1rem 0.5rem;
+	padding: 5px 15px;
+	border-radius: 0.3rem;
+	border-style: solid;
+	border-width: 0.1rem;		
+}
+
+#event{	
+	display:grid;
+	grid-template-rows: auto,auto,auto;
+	text-align: center;
+}
+
+#event h2{	
+	grid-row: 1/2;
+	margin: 0;
+	padding-top: 0.5rem;
+}
+
+#event h3{	
+	grid-row: 2/3;	
+	margin: 0;
+}
+
+#event p{	
+	grid-row: 3/4;
+	text-align: center;
+	margin: 0;	
+}
+
+#weather {
+	display:grid;
+	grid-template-columns: repeat(4,auto);
+	grid-template-rows: repeat(6,auto);
+	text-align: center;
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+#weather h2{
+	grid-column: 1/5;
+	grid-row: 1/2;
+	margin: 0;
+}
+
+#weather img{
+	grid-column: 2/3;
+	grid-row: 2/3;
+	margin: 0;
+	width: 3rem;
+	height: auto;
+	margin-left: 4rem;
+}
+
+#weather h3{
+	grid-column: 3/4;
+	grid-row: 2/3;
+	font-size: 1.8rem;
+	margin: 0;
+	margin-top: 0.5rem;
+	margin-right: 3rem;	
+}
+
+#weather h4{
+	grid-column: 1/5;
+	grid-row: 3/4;
+	font-size: 1.1rem;	
+	margin: 0;
+}
+
+#weather p{
+	grid-column: 1/5;
+	grid-row: 4/5;
+	font-size: 1rem;
+	border-style: solid;
+	border-color: #0077b6;
+	border-width: 0;		
+	border-top-width: 2px;
+	margin: 0.5rem;
+}
+
+#newRelease p{
+	text-align: center;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 #spotLights{
@@ -210,18 +324,62 @@ main > section > ul{
 	border-color: #0077b6;	
 }
 
-#spotLight1, #spotLight2{
+#spotLight1, #spotLight2, #spotLight3{
 	margin: 0;
     color: #0077b6; 
     font-weight: 300;    
     text-align: center;	
 	height: 185px;
-	background-color: #e4fbff;
+	background-color: white;
 	margin: .4rem .4rem .4rem .4rem;
 	padding-top: .2rem;
 	border-width: .0001px;
 	border-style: solid;
 	border-color: white;	
+	display:grid;
+	grid-template-columns: repeat(4,auto);
+	grid-template-rows: repeat(5,auto);
+	text-align: center;
+	justify-content: center;
+}
+
+#spotLight1 h2, #spotLight2 h2, #spotLight3 h2{	
+	margin:0;
+	grid-column: 1/5;
+	grid-row: 1/2;		
+}
+
+#spotLight1 img, #spotLight2 img, #spotLight3 img{	
+	margin:0;
+	grid-column: 2/4;
+	grid-row: 2/3;
+	width: 5rem;
+	height: auto;
+}
+
+#spotLight2 img{		
+	width: 3rem;	
+}
+
+#spotLight3 img{		
+	width: 4rem;	
+}
+
+#spotLight1 h4, #spotLight2 h4, #spotLight3 h4{	
+	margin:0;
+	grid-column: 1/5;
+	grid-row: 3/4;		
+}
+
+#spotLight1 p, #spotLight2 p, #spotLight3 p{
+	grid-column: 1/5;
+	grid-row: 4/5;
+	border-style: solid;
+	border-color: #0077b6;
+	border-width: 0;		
+	border-top-width: 2px;
+	margin: 0.1rem;
+	text-align: center;
 }
 
 #join{
@@ -246,10 +404,11 @@ footer div{
 	display: grid;
 	grid-template-columns:1fr;
 	grid-template-rows: auto, auto, auto, auto;
-	background-color: #0077b6;
+	background-color: #0077b6;	
 }
 
 footer img{
+	margin: 0;
 	grid-column: 1/2;
 	grid-row: 1/2;
 	width: 100px;
@@ -288,3 +447,4 @@ footer section {
 #small { display: inline;}
 #medium { display: none;}
 #large { display: none;}
+#spotLight3 { display: none;}

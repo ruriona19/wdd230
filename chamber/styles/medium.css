@@ -41,24 +41,39 @@
     main {
         display: grid;
 	    grid-template-columns:repeat(12, 1fr);
-	    grid-template-rows: repeat(5, 1fr);
+	    grid-template-rows: auto auto auto auto auto;
     }
 
     #hero, #event, #weather, #newRelease, #spotLights, #join{
         grid-column: 1/13;             
         color: #0077b6; 
         font-weight: 300;            	
-        height: 180px;
-        background-color: #caf0f8;
-        margin: .4rem;
-        padding-top: .2rem;
+        height: 180px; 
+        margin: .4rem;        
         border-width: .0001px;
         border-style: solid;
         border-color: #0077b6;	
     }
+    
+    #spotLights{
+        height: 200px;    
+    }
 
     #hero{
         grid-row: 1/2;
+        height: 400px;	
+        padding-bottom: .15rem;
+    }
+
+    #hero h1{
+        grid-column: 1/3;        
+        font-size: 3rem;        
+    }
+    
+    #hero a{	
+        grid-column: 1/2;                        
+        font-size: 1.3rem;        
+        margin: 3rem 3rem 2.5rem 0.5rem;                
     }
 
     #newRelease{
@@ -74,8 +89,8 @@
     #spotLight1, #spotLight2, #spotLight3{        
         color: #0077b6;
         font-weight: 300;        
-        height: 160px;
-        background-color: #e4fbff;
+        height: 180px;
+        background-color: #fff;
         margin: .4rem .4rem .4rem .4rem;
         padding-top: .2rem;
         border-width: .0001px;
@@ -86,6 +101,31 @@
     #join{
         display: block;
         grid-row: 4/5;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr;
+    }
+
+    #join a{        
+        grid-row: 1/2;
+        background-color: #0077b6;
+        text-decoration: none;
+        text-align: center;	
+        font-size: 1.8rem;
+        color: #fff;	
+        margin: 1rem;
+        padding: 5px 15px;
+        border-radius: 0.3rem;
+        border-style: solid;
+        border-width: 0.1rem;
+        font-weight: bold;
+    }
+
+    #join h2{
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     #event{
