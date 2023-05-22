@@ -25,3 +25,16 @@ const now = new Date();
 const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(now);
 
 currentDate.textContent = fulldate;
+
+
+//const showBanner = (day) => {
+    debugger
+    //if (day == 0) {
+        debugger
+        const banner = document.querySelector('.banner-text');
+        banner.setAttribute('display','none');
+    //}
+//}    
+
+//let currentDay = now.getDay();
+//showBanner(currentDay);

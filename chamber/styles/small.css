@@ -24,6 +24,19 @@ body {
     padding: 0; margin: .3rem;
 }
 
+.banner-text {
+	background-color: #e4f1f8;
+}
+
+.banner-text h1{
+	margin: 0 0 0.2rem 0;
+	text-align: center;
+	font-size: 1rem;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0077b6;
+	color:#0077b6;
+}
 /* header rules */
 
 header div{
@@ -447,4 +460,4 @@ footer section {
 #small { display: inline;}
 #medium { display: none;}
 #large { display: none;}
-#spotLight3 { display: none;}
+#spotLight3 { display: none;} 	
