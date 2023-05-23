@@ -27,14 +27,24 @@ const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 currentDate.textContent = fulldate;
 
 
-//const showBanner = (day) => {
-    debugger
-    //if (day == 0) {
-        debugger
-        const banner = document.querySelector('.banner-text');
-        banner.setAttribute('display','none');
-    //}
-//}    
+var colors = ['#0077b6', '#00b4d8']
+var currentColor = 0
+let currentDay = now.getDay();
+let bannerTemp = document.querySelector('.banner-text > h1');
 
-//let currentDay = now.getDay();
-//showBanner(currentDay);
+function changeColor() {
+    --currentColor
+
+    if (currentColor < 0) 
+        currentColor = colors.length -1
+    
+    bannerTemp.style.color = colors[(currentColor) % colors.length]    
+}
+
+if (currentDay == 1 || currentDay == 2) {        
+    bannerTemp.style.display = 'block';
+}else {    
+        bannerTemp.style.display = 'none';
+}
+
+setInterval(changeColor, 1000)
