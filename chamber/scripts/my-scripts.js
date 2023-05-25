@@ -50,7 +50,8 @@ function changeColor() {
 }
 
 // If the current day is equal to Monday and Tuesday then the banner is displayed
-if (currentDay == monday || currentDay == wednesday) {        
+// Change the day inside if clause if you want to see the banner in a different day
+if (currentDay == monday || currentDay == tuesday) {        
     bannerTemp.style.display = 'block';
 }else {    
     bannerTemp.style.display = 'none';
