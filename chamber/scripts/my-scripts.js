@@ -51,10 +51,27 @@ function changeColor() {
 
 // If the current day is equal to Monday and Tuesday then the banner is displayed
 // Change the day inside if clause if you want to see the banner in a different day
-if (currentDay == monday || currentDay == tuesday) {        
+if (currentDay == monday || currentDay == thursday) {        
     bannerTemp.style.display = 'block';
 }else {    
     bannerTemp.style.display = 'none';
 }
 
 setInterval(changeColor, 1000)
+
+// Weather apia connection
+
+const apiKey = "4805fb3c9a3f5182f4b8f3fa6d5faa4d";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=cochabamba";
+
+async function checkWeather(){
+    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+    var data = await response.json(); 
+    console.log(data);
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+}
+
+checkWeather();

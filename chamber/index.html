@@ -57,7 +57,12 @@
         <main class="limited">  
 
             <section id="hero">
-                <img src="images/cochabamba-city.jpeg" alt="Cochabamba hero image" width="1140" height="561">
+                <!--<img src="images/hero-wdd230.jpg" alt="Cochabamba hero image" width="1140" height="561">-->
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="images/hero-wdd230-large.webp">
+                    <source media="(min-width: 768px)" srcset="images/hero-wdd230-medium.webp">
+                    <img src="images/hero-wdd230-low.webp" alt="Random - Note the dimension allocation problem">
+                </picture>
                 <h1>Welcome to Cochabamba</h1>
                 <a class="buttonBox" href="join.html">Join the Chamber</a>
             </section>
@@ -67,12 +72,32 @@
                 <p>Join us for the grand opening of The Diamond Shack, Thursday at 1:00 p.m. <br/> <strong>more info ...</strong></p>                
             </section>
             <section id="weather">
-                <h2>Weather</h2>
-                <img src="images/weather-icon.png" alt="Temporal weather image">
-                <h3>33ºC</h3>
-                <h4>Sunny</h4>
-                <p><strong>Wind Speed:</strong> 2.5 Km/h<br/>
-                    <strong>Wind Chill:</strong>  N/A</p>                
+                <div class="search">
+                    <input type="text" placeholder="Enter city name"
+                    spellcheck="false">
+                    <button><img src="images/search.png"></button>
+                </div>
+                <div class="weather">
+                    <img src="images/weather-icons/sun.svg" class="weather-icon">
+                    <h1 class="temp">22&degC</h2>
+                    <h2 class="city">New York</h2>
+                    <div class="details">
+                        <div class="col">   
+                            <img src="images/weather-icons/humidity.svg" alt="Humidity image" class="weather-icon">
+                            <div> 
+                                <p class="humidity">50%</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                        <div class="col">   
+                            <img src="images/weather-icons/wind.svg" alt="Wind image" class="weather-icon">
+                            <div> 
+                                <p class="wind">15 km/h</p>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                                                
             </section>
             <section id="newRelease">
                 <h2>New Release</h2>
