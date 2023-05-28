@@ -181,8 +181,6 @@ main{
 	background-color: #e4f1f8;
 }
 
-
-
 main > section > ul{
 	background-color: #ceeeff;
 	margin: 0;
@@ -359,13 +357,12 @@ main #hero img{
 	font-weight: 700;	
 }
 
-#weather .humidity, .wind{
-	font-size: 1rem;
+#weather .detail-font{
+	font-size: 0.8rem;
 	font-weight: 700;
 	margin-top: 1rem;
 	text-align: center;
 }
-
 
 #newRelease p{
 	text-align: center;
