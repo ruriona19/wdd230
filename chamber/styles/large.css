@@ -44,7 +44,7 @@
 
     main {
         display: grid;	    
-	    grid-template-rows: auto, auto, auto;
+        grid: repeat(3, auto);
     }
 
     #event{
@@ -83,8 +83,7 @@
 
     #spotLights{
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr, 1fr;
+        grid: repeat(2, 1fr)/1fr;
         grid-column: 10/13;
         grid-row: 1/4;
         height: 649px;
