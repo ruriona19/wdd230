@@ -5,7 +5,7 @@
     
     header div{
         display: grid;
-        grid: auto/30%, 30%, 60%;                 
+        grid: auto/30%,30%,60s%;                 
     }
     
     header img{                

@@ -44,7 +44,7 @@
 
     main {
         display: grid;	    
-        grid: repeat(3, auto);
+        grid: repeat(3,auto);
     }
 
     #event{

@@ -41,7 +41,7 @@ body {
 
 header div{
 	display: grid;
-	grid: repeat(4, auto)/auto, repeat(11, 1fr);
+	grid: repeat(4,auto)/auto,repeat(11, 1fr);
 	background-color: #0077b6;
 }
 
