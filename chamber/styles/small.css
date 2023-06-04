@@ -186,12 +186,12 @@ main > section > ul{
 	padding: 1.5rem 3.5rem;
 }
 
-main #hero img{
+main .hero img{
 	width: 100%;
 	height: 100%;
 }
 
-#hero, #event, #weather, #newRelease{
+.hero, #event, #weather, #newRelease, #demographic{
     color: #0077b6;
     font-weight: 300;  
     text-align: center;
@@ -203,34 +203,34 @@ main #hero img{
 	border-color: #0077b6;
 }
 
-#hero{
+.hero{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);	
 }
 
-#hero picture{	
+.hero picture{	
 	grid-column: 1/4;
     grid-row: 1/4;
 }
 
-#hero picture img{	
+.hero picture img{	
 	width: 100%;
 	height: 100%;	
 }
 
-#hero h1{
+.hero h1{
 	grid-column: 1/4;
     grid-row: 1/2;
 	font-size: 1.5em;
 	text-align: left;
 	margin-top: 0.5rem;
 	padding-left: 0.5rem;
-	color:#0077b6;
+	color:#fff;
 	font-style: italic;
 }
 
-#hero a{
+.hero a{
 	grid-column: 1/3;
     grid-row: 3/4;
 	background-color: #0077b6;
@@ -369,9 +369,9 @@ main #hero img{
 	margin-right: 0.5rem;
 }
 
-#spotLights{
+#spotLights, #tourist-attractions{
 	margin: 0;
-    color: #0077b6; 
+    color: #0077b6; 	
     font-weight: 300;    
     text-align: center;	
 	height: 400px;
@@ -425,7 +425,7 @@ main #hero img{
 }
 
 #spotLight1 h4, #spotLight2 h4, #spotLight3 h4{	
-	margin:0;
+	margin:0;	
 	grid-column: 1/5;
 	grid-row: 3/4;		
 }
@@ -506,3 +506,54 @@ footer section {
 #medium { display: none;}
 #large { display: none;}
 #spotLight3 { display: none;} 	
+
+/*Discover*/
+#tourist-attractions{
+	height: 2400px;
+	display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.attraction{
+    color: #0077b6; 
+    font-weight: 300;    
+    text-align: center;	
+	width: 95%;
+	height: 20%;
+	background-color: white;
+	margin: .4rem .4rem .4rem .4rem;
+	border-width: .0001px;
+	border-style: solid;
+	border-color: #0077b6;	
+	text-align: center;
+	justify-content: top;
+	display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.attraction img{
+	width: 100%;
+	height: 60%;
+	filter: blur(0em);
+    transition: filter 1.5s;	
+}
+
+.attraction img[data-src]{
+    filter: blur(0.5em);    
+}
+
+.attraction p{
+	text-align: center;
+	margin: 0;
+}
+
+.attraction h3{
+	margin-top: 0.5rem;	
+}
+
+#demographic{
+	height: 500px;
+	padding: 0.5rem;
+}
