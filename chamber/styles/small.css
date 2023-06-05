@@ -99,21 +99,18 @@ header nav {
 
 header #sectionDate {
 	margin: 0;
-    color: #fff; 
-    font-weight: 300;    
-    text-align: center;
+	color: #fff;
+	font-weight: 300;
+	text-align: center;
 	grid-column: 1/13;
 	grid-row: 4/5;
 	height: 25px;
-	background-color: #018cd6;
-	margin: .4rem;
-	padding-top: .2rem;
-	border-width: .0001px;
+	background-color: #0077b6;
+	margin: 0.4rem;
+	padding-top: 0.05rem;
+	border-width: 0.0001px;
 	border-style: solid;
-	border-top-color: #fff;
-	border-bottom-color: #fff;
-	border-left-color: #018cd6;
-	border-right-color: #018cd6;
+	border-color: #fff;
 }
 
 nav ul {
