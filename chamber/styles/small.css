@@ -386,12 +386,12 @@ main #hero img{
     font-weight: 300;    
     text-align: center;	
 	height: 185px;
-	background-color: white;
+	background-color: #fff;
 	margin: .4rem .4rem .4rem .4rem;
 	padding-top: .2rem;
 	border-width: .0001px;
 	border-style: solid;
-	border-color: white;	
+	border-color: #fff;	
 	display:grid;
 	grid-template-columns: repeat(4,auto);
 	grid-template-rows: repeat(5,auto);
@@ -475,7 +475,7 @@ footer h1{
 	grid-row: 2/3;	
 	font-size: 1.3rem;	
 	text-align: center;
-	color: white;
+	color: #fff;
 	font-style: italic;
 }
 
@@ -483,7 +483,7 @@ footer h2 {
 	grid-row: 3/4;		
 	font-size: 1rem;
 	text-align: center;
-	color: white;
+	color: #fff;
 	font-weight: 300;
 }
 
