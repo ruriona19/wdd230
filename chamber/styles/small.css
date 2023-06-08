@@ -510,6 +510,14 @@ footer section {
 	border-style: solid;
 	padding-top: 0.8rem;
 }
+
+.daysElapsedSinceLastVisit{
+	text-align: center;
+	color: #0077b6;
+	font-weight: 700;
+}
+
+
 #small { display: inline;}
 #medium { display: none;}
 #large { display: none;}
