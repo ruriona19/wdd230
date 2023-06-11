@@ -573,3 +573,86 @@ footer section {
 	height: 500px;
 	padding: 0.5rem;
 }
+
+/*----------Join Page-------------*/
+
+/*FORM*/
+
+#joinUsTitle{
+	grid-column: 2/12;
+	color: #0077b6;
+	text-align: center;
+}
+form {
+	grid-column: 2/12;
+}
+
+form fieldset{
+    margin: 2rem 0;
+    border: 2px solid #0077b6;;
+    border-radius: 10px;
+    padding: .5rem 2%;
+}
+
+form legend {
+    color: #0077b6;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+	font-weight: 700;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: #00b4d8;
+    font-size: .8rem;
+	font-weight: 700;
+}
+
+form label.top input, form label.top select, form label.top textarea{
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 2px #0077b6;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #0077b6;
+    width: 100%;
+    max-width: 20rem;
+    background-color: #ffffff;
+}
+
+form label.sbs{
+    display: block;
+    padding: .75rem 0;
+    color: #0077b6;
+}
+
+form input.submitBtn{
+    border: none;
+    background-color: #0077b6;
+    color: white;
+    border-radius: 0.5rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-left: #00b4d8 solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+/*----------Thank You Page-------------*/
+
+#thankYouMessage{
+	grid-column: 2/12;
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+	color:#0077b6;
+}
