@@ -83,15 +83,15 @@ function buildWindChill(speed, temp){
 
 async function checkWeather(){
     let response = await fetch(apiUrl + `&appid=${apiKey}`);
-    let data = await response.json(); 
-    let temperature = Math.round(data.main.temp);
-    let speedWind = data.wind.speed;
+    let weatherData = await response.json(); 
+    let temperature = Math.round(weatherData.main.temp);
+    let speedWind = weatherData.wind.speed;
     let windChill = 'N/A';
     if (temperature <= 10 && speedWind > 4.8) {
       windChill = buildWindChill(speedWind, temperature);
     }
         
-    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".city").innerHTML = weatherData.name;
     document.querySelector(".temp").innerHTML = temperature + "°C";
     document.querySelector(".wind").innerHTML = speedWind + " km/h";
     document.querySelector(".wind-chill").innerHTML = windChill + "°C";    
@@ -166,3 +166,61 @@ if (daysFromLastVisit !== null) {
 
 // Store the new msFromLastVisit into localStorage
 localStorage.setItem("msFromLastVisit-ls", msLastVisit);
+
+
+/*---------Directory------------*/
+
+const gridbutton = document.getElementById("gridBtn");
+const listbutton = document.getElementById("listBtn");
+const display = document.querySelector("article");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	display.classList.add("gridView");
+	display.classList.remove("listView");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	display.classList.add("listView");
+	display.classList.remove("gridView");
+}
+
+const companiesDataPath = 'json/data.json';
+
+async function getCompaniesData() {
+    const response = await fetch(companiesDataPath);
+    const companiesData = await response.json();
+    console.table(companiesData);
+    displayCompanies(companiesData.companies);
+}
+
+getCompaniesData();
+
+const displayCompanies = (companies) => { 
+  let index = 0;
+  const cards = document.querySelectorAll('article section'); // select the output container element
+
+  
+  companies.forEach((company) => {
+    image = cards[index].querySelector('img');
+    companyName = cards[index].querySelector('h3');
+    address = cards[index].querySelector('#address');
+    phoneNumber = cards[index].querySelector('#phoneNumber');
+    email = cards[index].querySelector('a');
+    membership = cards[index].querySelector('#membership');
+
+    image.setAttribute('src', company.imagePath);
+    companyName.textContent = company.name;
+    address.textContent = company.address;
+    phoneNumber.textContent = company.phone;
+    email.setAttribute('href', company.email);
+    email.textContent = company.email;
+    membership.textContent = company.membership;
+
+    index = index + 1;
+  }) // end of forEach loop
+}

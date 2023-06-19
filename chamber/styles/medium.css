@@ -42,7 +42,7 @@
         font-size: 1.1rem;         
     }
 
-    main {
+    main:not(.mainDirectory){
         display: grid;
 	    grid-template-columns:repeat(12, 1fr);
 	    grid-template-rows: auto auto auto auto auto;
@@ -215,6 +215,10 @@
     .attraction:hover{        
         opacity: .6;
         transform: scale(1.01);
+    }
+    /*--------Directory Page----------*/
+    .menu button {
+        width: 10%;
     }
 } /* end of media query */
 
