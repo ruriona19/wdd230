@@ -163,4 +163,9 @@
     #medium { display: none;}
     #large { display: inline;}
     #spotLight3 { display: inline;}
+
+    /*-----------Directory Page----------------*/
+    .menu button {
+        width: 6%;
+    }
 } /* end of media query */
