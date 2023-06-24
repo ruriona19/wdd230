@@ -145,8 +145,21 @@
     }
 
     #weather .weather-icon{	
-        margin-top: 0.5rem;
-        width: 2rem;
+        margin-top: 0.5rem;        
+    }
+
+    #weather .col img{
+        width: 1.5rem;	
+        align-items: center;
+        text-align: center;
+        margin-left: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #weather .col p{
+        margin:0;
+        font-weight: 700;	
+        font-size: 0.6rem;
     }
 
     main p{

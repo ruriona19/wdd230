@@ -63,6 +63,12 @@ setInterval(changeColor, 1000)
 
 const apiKey = "4805fb3c9a3f5182f4b8f3fa6d5faa4d";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=cochabamba";
+const weatherIcon = document.querySelector('.weather-icon');
+const captionDesc = document.querySelector('#temp-desc');
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function buildWindChill(speed, temp){
     // Compute the windchill
@@ -87,6 +93,11 @@ async function checkWeather(){
     let temperature = Math.round(weatherData.main.temp);
     let speedWind = weatherData.wind.speed;
     let windChill = 'N/A';
+    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;    
+    let desc = weatherData.weather[0].description;
+    const descWords = desc.split(/[ ]+/);        
+    desc = `${capitalizeFirstLetter(descWords[0])} ${capitalizeFirstLetter(descWords[1])}`;
+
     if (temperature <= 10 && speedWind > 4.8) {
       windChill = buildWindChill(speedWind, temperature);
     }
@@ -95,6 +106,9 @@ async function checkWeather(){
     document.querySelector(".temp").innerHTML = temperature + "°C";
     document.querySelector(".wind").innerHTML = speedWind + " km/h";
     document.querySelector(".wind-chill").innerHTML = windChill + "°C";    
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = desc;
 }
 
 checkWeather();

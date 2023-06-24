@@ -321,7 +321,7 @@ main .hero img[data-src]{
 
 #weather .weather-icon{	
 	margin-top: 1.5rem;
-	width: 3rem;
+	width: 4rem;
 	height: auto;	
 }
 
@@ -334,6 +334,7 @@ main .hero img[data-src]{
 	font-size: 1rem;	
 	font-weight: 700;
 	margin-top: -1rem;
+	margin-bottom: 0;
 }
 
 #weather .details{
