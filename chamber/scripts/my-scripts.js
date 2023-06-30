@@ -222,10 +222,10 @@ const displayCompanies = (companies) => {
   companies.forEach((company) => {
     image = cards[index].querySelector('img');
     companyName = cards[index].querySelector('h3');
-    address = cards[index].querySelector('#address');
-    phoneNumber = cards[index].querySelector('#phoneNumber');
+    address = cards[index].querySelector('.address');
+    phoneNumber = cards[index].querySelector('.phoneNumber');
     email = cards[index].querySelector('a');
-    membership = cards[index].querySelector('#membership');
+    membership = cards[index].querySelector('.membership');
 
     image.setAttribute('src', company.imagePath);
     companyName.textContent = company.name;

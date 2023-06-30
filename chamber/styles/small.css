@@ -778,7 +778,7 @@ main>div>h1 {
 	margin-left: 5.9rem;
 	width: 30px;
 	height: 30px;
-	border: 3px solid transparent;
+	border: 3px solid transparent;	
 	border-radius: 50%;
 	border-right-color: #0077b6;
 	animation: spinner-anim 0.8s linear infinite;
