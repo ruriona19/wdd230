@@ -13,7 +13,7 @@
         <link href="styles/small.css" rel="stylesheet">
         <link href="styles/medium.css" rel="stylesheet">
         <link href="styles/large.css" rel="stylesheet">        
-        <title>Membership Thank You Message | Cochabamba Chamber of Commerce</title>
+        <title>Contact Page | Cochabamba Chamber of Commerce</title>
     </head>
     <body>
         <section class="banner limited" >
@@ -45,8 +45,8 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="discover.html">Discover</a></li>
                         <li><a href="directory.html">Directory</a></li>
-                        <li class="active"><a href="join.html">Join</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>                    
                     </ul>
                 </nav>
                 <section id="sectionDate">                    
@@ -55,11 +55,29 @@
             </div>                         
         </header>            
         <main class="limited">
-            <section id="thankYouMessage">
-                <h1>Membership Application</h1>
-                <p>Thanks for applying to become a member of our chamber of commerce. We will get back to you within a week with a response.</p>
-            </section>
-        </main>
+                <div id="joinUsTitle">
+                    <h1>Contact Us</h1>    
+                </div>
+                <form method="get" action="contact-thankyou.html">
+                    <fieldset>                        
+                        <label class="top">First Name* <input type="text" name="fname" required></label>
+                        <label class="top">Last Name* <input type="text" name="lname" required></label>
+                        <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                        <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+                        <label class="top">Message* <textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false" required></textarea></label>
+                    </fieldset>                                                            
+                    <input type="submit" value="Send My Inquiry" class="submitBtn">
+                    <div class="contact-container">                        
+                            <h2>Visit US</h2>
+                            <p>Cochabamba Chamber of Commerce</p>
+                            <p>José Ballivian Av. #782</p>
+                            <p>+(591) 722-56544</p>
+                            <p>Monday - Friday: 8:00 AM to 4:00 PM</p>
+                            <h2>Send us your questions or comments using the form below. We will respond promptly to your inquiry.</h2>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15230.26722224609!2d-66.1659892127793!3d-17.38456581982518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3740ebf1b5903%3A0x4ee9b1209cf4e296!2sC%C3%A1mara%20de%20Industria%2C%20Comercio%20y%20Servicios%20de%20Cochabamba%20-%20ICAM!5e0!3m2!1sen!2sbo!4v1688230963614!5m2!1sen!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                        
+                    </div>
+                </form>                
+        </main>       
         
         <footer class="limited">                    
             <div>

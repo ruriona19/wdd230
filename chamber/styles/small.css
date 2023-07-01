@@ -674,7 +674,7 @@ form label.top input:required:valid {
 
 /*----------Thank You Page-------------*/
 
-#thankYouMessage{
+#thankYouMessage, #contactThankYouMessage{
 	grid-column: 2/12;
 	display: flex;
 	flex-direction: column;	
@@ -818,4 +818,21 @@ main>div>h1 {
 	}
 }
 
-/*.simple-spinner { display: none;}
+/***********Contact page*****************************/
+iframe {
+    display: block;
+    width: 90%;
+    max-width: 60rem;
+    height: 25em;
+    margin: 2rem auto;
+    border: 1px solid black;
+}
+
+.contact-container {
+	color: #0077b6;		
+}
+
+.contact-container p{	
+	margin: 0;
+
+}
