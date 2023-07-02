@@ -114,31 +114,29 @@
         margin-right: 1.5rem;
     }
 
+    #spotLight1, #spotLight2, #spotLight3{        
+        width: auto;
+        height: auto;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+
     #spotLight1{
         grid-row: 1/2;
-        margin-bottom: 0;
+        margin-top: 0.3rem;
     }
 
     #spotLight2{
         grid-row: 2/3;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: 0.5rem;   
     }
 
     #spotLight3{
         grid-row: 3/4;
-        margin-top: 0;
-    }
-
-    #spotLight1, #spotLight2, #spotLight3{        
-        width: 238px;
-        height: 206px;                
-    }
-
-    #spotLight1 p, #spotLight2 p, #spotLight3 p{        
-        width: 238px;
-        height: 180px;
-        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
     #weather{

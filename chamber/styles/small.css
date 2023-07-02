@@ -401,13 +401,13 @@ main .hero img[data-src]{
 	height: 185px;
 	background-color: white;
 	margin: .4rem .4rem .4rem .4rem;
-	padding-top: .2rem;
+	padding: .2rem;
 	border-width: .0001px;
 	border-style: solid;
 	border-color: white;	
-	display:grid;
-	grid-template-columns: repeat(4,auto);
-	grid-template-rows: repeat(5,auto);
+	display:flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 	justify-content: center;
 }
@@ -436,19 +436,19 @@ main .hero img[data-src]{
 
 #spotLight1 h4, #spotLight2 h4, #spotLight3 h4{	
 	margin:0;	
-	grid-column: 1/5;
-	grid-row: 3/4;		
 }
 
-#spotLight1 p, #spotLight2 p, #spotLight3 p{
-	grid-column: 1/5;
-	grid-row: 4/5;
-	border-style: solid;
-	border-color: #0077b6;
-	border-width: 0;		
-	border-top-width: 2px;
+#spotLight1 p, #spotLight2 p, #spotLight3 p{			
 	margin: 0.1rem;
 	text-align: center;
+	font-weight: 700;
+	color: black;
+	font-size: 0.9rem;
+}
+
+#spotLight1 a, #spotLight2 a, #spotLight3 a{	
+	color: #0077b6;
+	font-weight: 700;	
 }
 
 #join{
@@ -830,6 +830,8 @@ iframe {
 
 .contact-container {
 	color: #0077b6;		
+	margin-left: 0.7rem;
+	margin-right: 0.7rem;
 }
 
 .contact-container p{	
