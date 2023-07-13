@@ -1,6 +1,10 @@
 :root {
 	--primarycolor: #0D3A18;
 	--secondarycolor: #A8EBB7;
+	--tertiarycolor: #4C8577;
+	--quaternarycolor: #A6ECE0;
+	--navactivecolor: #31574d;
+	--whitecolor: #fff;
   }
 
 /* Text Adjust: This line of code avoid the text width change when we roll our phone sideways
@@ -21,7 +25,7 @@ body {
 
 
 .limited {
-    max-width: 1140px; 
+    max-width: 1280px; 
     margin: 0.1rem auto;
 }
 
@@ -61,7 +65,7 @@ header img{
 header h1 {	        		
 	grid-row: 1/3;	
 	grid-column: 4/11;
-	padding-top: 2rem;
+	padding-top: 2.5rem;
 	padding-left: 1rem; 
 	font-size: 1.4rem;
 	height:fit-content;   
@@ -87,12 +91,10 @@ header button {
 	
 }
 
-
-
 header nav {
 	grid-column: 1/13;
 	grid-row: 3/4;
-	background-color: #023c5b;
+	background-color: var(--tertiarycolor);
 	text-align: center;	
 }
 
@@ -125,7 +127,7 @@ nav ul.open {
 
 nav a {
 	display: block;
-	color: #fff;
+	color: var(--secondarycolor);
 	text-align: center;
 	padding: 6px;
 	text-decoration: none;
@@ -133,14 +135,14 @@ nav a {
 	border-top: 1px solid;
 }
 
-nav a:hover {
-	background-color: #caf0f8;
-	color: black;	
-	border-color: #fff;
+nav li.active a {
+	background-color: var(--navactivecolor);
 }
 
-nav li.active a {
-	background-color: rgb(59, 97, 117);
+nav a:hover {
+	background-color: #caf0f8;
+	color: var(--primarycolor);	
+	border-color: var(--secondarycolor);
 }
 
 #hamburgerBtn span:nth-child(1) {display: block;}
@@ -150,9 +152,6 @@ nav li.active a {
 #hamburgerBtn.open span:nth-child(2) {display: block;}
 
 
-footer{
-    background-color: #0077b6;
-}
 
 footer div{
 	display: flex;
@@ -162,7 +161,7 @@ footer div{
 }
 
 footer img{
-	width: 100px;
+	width: 25%;
 	height: auto;
 }
 
@@ -188,6 +187,16 @@ footer section {
 	
 }
 
+footer #social-icon-area{
+	display: flex;
+	flex-direction: row;
+}
+
+.social a img{
+	width: 2.5rem;
+	height: auto;
+	padding-left: 0.5rem;	
+}
 
 
 #small { display: inline;}
