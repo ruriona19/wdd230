@@ -50,7 +50,7 @@ if (currentDay == monday || currentDay == thursday) {
 
 setInterval(changeColor, 1000)
 
-// lazy load
+// lazy load*/
 
 const imagesToLoad = document.querySelectorAll("img[data-src]");
 
@@ -84,7 +84,7 @@ if ("IntersectionObserver" in window) {
     });
   }
 
-// Get the number of days between visits
+/*// Get the number of days between visits
 
 // Get the number of milliseconds in one day = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
 const dayToMilliseconds = 86400000;
