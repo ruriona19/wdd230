@@ -1,6 +1,9 @@
+
+/* Get current year */
 let copyrightYear = new Date().getFullYear();
 document.getElementById("copyrightYear").innerHTML = copyrightYear;
 
+/* Nav toggle menu*/
 function toggleMenu() {
     document.getElementById("primaryNav").classList.toggle("open");
     document.getElementById("hamburgerBtn").classList.toggle("open");
@@ -9,7 +12,7 @@ function toggleMenu() {
 const x = document.getElementById('hamburgerBtn');
 x.onclick = toggleMenu;
 
-
+/* Get current date*/
 let currentDate = document.getElementById("currentDate");
 
 const now = new Date();

@@ -260,40 +260,6 @@ main .ca-coastal-area p{
 	text-align: left;
 }
 
-main #weather .search{	
-	grid-row: 1/2;
-	width: 100%;
-	display: flex;	
-	align-items: center;
-	justify-content: space-between;	
-}
-
-main #weather .search input{
-	border: 0;
-	outline: 0;
-	background:#caf0f8;
-	color: #0E3458;
-	padding: 1rem 1.5rem;
-	height: 2.5rem;
-	border-radius: 0.2rem;
-	flex: 1;
-	margin-right: 0.5rem;
-}
-
-main #weather .search button{
-	border: 0;
-	outline: 0;
-	background:#caf0f8;	
-	padding-top: 0.2rem;
-	height: 2.5rem;
-	width: 3.5rem;
-	cursor: pointer;
-	border-radius: 0.2rem;	
-}
-
-main #weather .search>button>img{	
-	width: 1.5rem;	
-}
 
 main #weather .weather-icon{	
 	margin-top: 1.5rem;
@@ -301,15 +267,16 @@ main #weather .weather-icon{
 	height: auto;	
 }
 
-main #weather h1{	
+main #weather #temp{	
 	font-size: 1.3rem;	
 	font-weight: 700;
-}
+	margin: 0;
+}	
 
-main #weather h2{	
+main #weather #temp-desc, main #weather #city{	
 	font-size: 1rem;	
-	font-weight: 700;
-	margin-top: -1rem;
+	font-weight: 300;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 
