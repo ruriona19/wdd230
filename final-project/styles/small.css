@@ -214,7 +214,7 @@ main .hero a{
 	align-content: center;	
 }
 
-main #coastal-area{
+main #coastal-area, main #weather{
 	background-color: var(--sectioncolor);
 	text-align: center;	
 	margin-left: 0.5rem;
@@ -260,6 +260,93 @@ main .ca-coastal-area p{
 	text-align: left;
 }
 
+main #weather .search{	
+	grid-row: 1/2;
+	width: 100%;
+	display: flex;	
+	align-items: center;
+	justify-content: space-between;	
+}
+
+main #weather .search input{
+	border: 0;
+	outline: 0;
+	background:#caf0f8;
+	color: #0E3458;
+	padding: 1rem 1.5rem;
+	height: 2.5rem;
+	border-radius: 0.2rem;
+	flex: 1;
+	margin-right: 0.5rem;
+}
+
+main #weather .search button{
+	border: 0;
+	outline: 0;
+	background:#caf0f8;	
+	padding-top: 0.2rem;
+	height: 2.5rem;
+	width: 3.5rem;
+	cursor: pointer;
+	border-radius: 0.2rem;	
+}
+
+main #weather .search>button>img{	
+	width: 1.5rem;	
+}
+
+main #weather .weather-icon{	
+	margin-top: 1.5rem;
+	width: 4rem;
+	height: auto;	
+}
+
+main #weather h1{	
+	font-size: 1.3rem;	
+	font-weight: 700;
+}
+
+main #weather h2{	
+	font-size: 1rem;	
+	font-weight: 700;
+	margin-top: -1rem;
+	margin-bottom: 0;
+}
+
+main #weather .details{
+	display: flex;
+	align-items: center;
+	justify-content:space-around;
+	padding: 0 2rem;
+	margin-top: 0.1rem;
+}
+
+main #weather .col{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+main #weather .col img{
+	width: 2rem;	
+	align-items: center;
+	text-align: center;
+	margin-left: 0.7rem;
+	margin-bottom: 0.5rem;
+}
+
+main #weather .col p{
+	margin:0;
+	font-weight: 700;	
+}
+
+main #weather .detail-font{
+	font-size: 0.8rem;
+	font-weight: 700;
+	margin-top: 1rem;
+	text-align: center;
+}
 
 
 /* footer rules */
