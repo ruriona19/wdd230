@@ -226,11 +226,11 @@ main #coastal-area, main #weather{
 	align-content: center;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	color: var(--primarycolor);
 }
 
 main #coastal-area h2{
-	color: var(--primarycolor);
-	font-size: 1.2rem;
 	padding: 0.5rem;
 }
 
@@ -255,64 +255,120 @@ main .ca-coastal-area h3{
 }
 
 main .ca-coastal-area p{
-	color: var(--primarycolor);
 	padding: 0.5rem;
 	text-align: left;
 }
 
-
-main #weather .weather-icon{	
-	margin-top: 1.5rem;
-	width: 4rem;
-	height: auto;	
+main #weather{
+	margin-bottom: 1rem;
 }
 
-main #weather #temp{	
-	font-size: 1.3rem;	
-	font-weight: 700;
+main #weather h2{
 	margin: 0;
-}	
+	padding-top: 0.5rem;
+}
 
-main #weather #temp-desc, main #weather #city{	
-	font-size: 1rem;	
-	font-weight: 300;
-	margin-top: 0;
+main #weather #currently{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	font-weight: 700;
+}
+
+main #weather #currently-desc{
+	grid-column: 3/5;
+	grid-row: 1/2;
+	font-size: 0.8rem;
 	margin-bottom: 0;
 }
 
-main #weather .details{
+main #weather #temp{	
+	font-size: 3rem;	
+	font-weight: 700;
+	height:0%;
+	margin: 0;
+	grid-column: 3/5;
+	grid-row: 2/4;
+
+}	
+
+main #weather #degree-symbol{
+	grid-column: 5/6;
+	grid-row: 2/3;
+	font-weight: 700;
+	font-size: 1.5rem;
+	height: 20px;
+	margin: 0;
+	padding-top: 0.4rem;
+}
+
+main #weather #degree-letter{
+	grid-column: 5/6;
+	grid-row: 3/4;
+	font-weight: 700;
+	font-size: 1rem;
+	margin: 0;
+	padding-top: 0.2rem;
+}
+
+main #weather #temp-desc{	
+	font-size: 0.9rem;
+	height: 1rem;	
+	font-weight: 300;
+	margin: 0;
+	grid-column: 6/10;
+	grid-row: 2/3;	
+	padding-top: 0.5rem;
+	text-align: left;
+}
+
+main #weather #humidity{
+	font-size: 0.9rem;
+	grid-column: 6/10;
+	grid-row: 3/4;
+	font-weight: 300;
+	margin:0;	
+	padding-top: 0.3rem;
+	text-align: left;
+}
+
+main #weather #weather-icon{	
+	margin: 0;
+	width: 5rem;
+	grid-column: 10/12;
+	grid-row: 1/5;	
+	padding-top: 1rem;
+}
+
+main #weather #forecast-5days{
 	display: flex;
 	align-items: center;
 	justify-content:space-around;
-	padding: 0 2rem;
-	margin-top: 0.1rem;
 }
 
-main #weather .col{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
+main #weather .forecast-card{
+	background-color: var(--mainbackgroundcolor);
+	text-align: center;	
+	margin: 0.4rem;
+	border-radius: var(--border-radius);
+	border-style: solid;
+	border-width: 0.1rem;	
+	align-content: center;
+	width: 3.3rem;
 }
 
-main #weather .col img{
-	width: 2rem;	
-	align-items: center;
-	text-align: center;
-	margin-left: 0.7rem;
-	margin-bottom: 0.5rem;
-}
-
-main #weather .col p{
-	margin:0;
-	font-weight: 700;	
-}
-
-main #weather .detail-font{
-	font-size: 0.8rem;
+main #weather .day-of-week{
 	font-weight: 700;
-	margin-top: 1rem;
-	text-align: center;
+	margin: 0;
+	padding-top: 0.2rem;
+}
+
+main #weather .max-temp{
+	font-weight: 700;
+	margin: 0;
+	padding-top: 0rem;
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
+	font-size: 0.8rem;
 }
 
 

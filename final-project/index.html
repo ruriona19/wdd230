@@ -66,29 +66,43 @@
                 </div>
             </section>
             <section id="weather">
-                <div class="weather">  
-                    <h2>Carlsbad Weather</h2>                  
-                    <img src="/" class="weather-icon" alt="Weather icon">                    
-                    <p id="temp-desc"></p>
+                <h2>Carlsbad Weather / Today</h2>
+                <div id="currently">
+                    <p id="currently-desc">CURRENTLY</p>
                     <p id="temp"></p>
-                    <p id="city"></p>
-                    <div class="details">                        
-                        <div class="col">   
-                            <img src="images/weather-icons/wind.svg" alt="Wind image" class="weather-icon">
-                            <div> 
-                                <p class="wind detail-font"></p>
-                                <p class="detail-font">Wind Speed</p>
-                            </div>
-                        </div>
-                        <div class="col">   
-                            <img src="images/weather-icons/wind-chill.svg" alt="Wind Chill image" class="weather-icon">
-                            <div> 
-                                <p class="wind-chill detail-font"></p>
-                                <p class="detail-font">Wind Chill</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p id="degree-symbol">&deg;</p>
+                    <p id="degree-letter">C</p>
+                    <p id="humidity"></p>
+                    <img src="/" id="weather-icon" alt="Weather icon">                    
+                    <p id="temp-desc"></p>
                 </div> 
+                <div id="forecast-5days">                        
+                    <div class="forecast-card">
+                        <p id="day-of-week1" class="day-of-week"></p>
+                        <img src="/" id="weather-icon1" class="weather-icon-forecast"> 
+                        <p id="max-temp1" class="max-temp"></p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="day-of-week2" class="day-of-week"></p>
+                        <img src="/" id="weather-icon2" class="weather-icon-forecast"> 
+                        <p id="max-temp2" class="max-temp"></p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="day-of-week3" class="day-of-week"></p>
+                        <img src="/" id="weather-icon3" class="weather-icon-forecast"> 
+                        <p id="max-temp3" class="max-temp"></p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="day-of-week4" class="day-of-week"></p>
+                        <img src="/" id="weather-icon4" class="weather-icon-forecast"> 
+                        <p id="max-temp4" class="max-temp"></p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="day-of-week5" class="day-of-week"></p>
+                        <img src="/" id="weather-icon5" class="weather-icon-forecast"> 
+                        <p id="max-temp5" class="max-temp"></p>
+                    </div>
+                </div>
             </section>
         </main>
     

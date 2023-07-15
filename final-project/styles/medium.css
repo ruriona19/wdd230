@@ -82,6 +82,9 @@
         padding-right: 1rem;
     }
 
+    main #weather .forecast-card{
+        width: 8rem;
+    }
 
     /*main:not(.mainDirectory){
         display: grid;
