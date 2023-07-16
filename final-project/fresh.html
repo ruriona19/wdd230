@@ -47,51 +47,43 @@
                     <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
                 </fieldset>
                 <fieldset>
-                    <legend>Pick the fruits</legend>
-                    <label class="top">1st Fruit Option</label>
+                    <legend>Pick three fruits</legend>
                     <div class="custom-select">
-                    <select>
-                        <option value="0">Select fruit:</option>
-                        <option value="1">Audi</option>
-                        <option value="2">BMW</option>
-                        <option value="3">Citroen</option>
-                        <option value="4">Ford</option>
-                        <option value="5">Honda</option>
-                        <option value="6">Jaguar</option>
-                        <option value="7">Land Rover</option>
-                        <option value="8">Mercedes</option>
-                        <option value="9">Mini</option>
-                        <option value="10">Nissan</option>
-                        <option value="11">Toyota</option>
-                        <option value="12">Volvo</option>
-                    </select>
+                        <select id="fruit-opt1">
+                            <option value="0">Select fruit option:</option>
+                            <option value="1">Apple</option>
+                            <option value="2">Apricot</option>
+                            <option value="3">Avocado</option>
+                            <option value="4">Banana</option>
+                            <option value="5">Blackberry</option>
+                            <option value="6">Blueberry</option>
+                        </select>
                     </div>
-                    <label class="top">Business Name Title* <input type="text" name="bntitle" required></label>
-                    <label class="top">Business Description <textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false"></textarea></label>
+                    <div class="custom-select">
+                        <select id="fruit-opt2">
+                            <option value="0">Select fruit option:</option>
+                            <option value="1">Apple</option>
+                            <option value="2">Apricot</option>
+                            <option value="3">Avocado</option>
+                            <option value="4">Banana</option>
+                            <option value="5">Blackberry</option>
+                            <option value="6">Blueberry</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <select id="fruit-opt3">
+                            <option value="0">Select fruit option:</option>
+                            <option value="1">Apple</option>
+                            <option value="2">Apricot</option>
+                            <option value="3">Avocado</option>
+                            <option value="4">Banana</option>
+                            <option value="5">Blackberry</option>
+                            <option value="6">Blueberry</option>
+                        </select>
+                    </div>
+                    <label class="top">Special Instructions<textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false"></textarea></label>
                 </fieldset>
-                <fieldset>
-                    <legend>Membership Level</legend>
-                    <div>                            
-                        <label class="sbs">
-                            <input type="radio" name="mlevel" value="NP">
-                            NP Membership
-                        </label>
-                        <label class="sbs">
-                            <input type="radio" name="mlevel" value="Bronze"> 
-                            Bronze Membership</label>
-                        <label class="sbs">
-                            <input type="radio" name="mlevel" value="Silver"> 
-                            Silver Membership
-                        </label>
-                        <label class="sbs">
-                            <input type="radio" name="mlevel" value="Gold"> 
-                            Gold Membership
-                        </label>                                                     
-                    </div>                        
-                </fieldset>
-                <input type="hidden" id="currentHiddenDate" name="last-modified" value="currentDateTime"/>
-                <input type="submit" value="Purchase My Membership" class="submitBtn">
-                
+                <input type="submit" value="Save My Special Drink" class="submitBtn">            
             </form>       
         </main>
         <footer class="limited">
@@ -127,7 +119,7 @@
                 </section>
             </div>
         </footer>    
+        <script src="scripts/my-scripts.js"></script>
         <script src="scripts/custom-select.js"></script>
-        <script src="scripts/weather.js"></script>
     </body>
 </html>
