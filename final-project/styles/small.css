@@ -334,9 +334,10 @@ main #weather #humidity{
 main #weather #weather-icon{	
 	margin: 0;
 	width: 5rem;
-	grid-column: 10/12;
+	grid-column: 9/11;
 	grid-row: 1/5;	
 	padding-top: 1rem;
+	margin-left: 0.7rem;
 }
 
 main #weather #forecast-5days{
@@ -423,3 +424,136 @@ footer #social-icon-area{
 
 #small { display: inline;}
 #spotLight3 { display: none;} 	
+
+/* Fresh Rules */ 
+/*FORM*/
+main h1{
+	margin: 0;
+	color: var(--primarycolor);
+	text-align: center;
+	padding: 0.5rem;
+}
+
+form {
+	margin: 0.5rem;
+}
+
+form fieldset{
+    margin: 0.5rem 0;
+    border: 2px solid var(--primarycolor);
+    border-radius: 10px;
+	background-color: var(--secondarycolor);
+    padding: .5rem;
+}
+
+
+form legend {
+    color: var(--primarycolor);
+    margin: 0 1rem;
+    padding: 0 .5rem;
+	font-weight: 700;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: var(--primarycolor);
+    font-size: .8rem;
+	font-weight: 700;
+}
+
+form label.top input, form label.top select, form label.top textarea, form #first-opt, .select-selected{
+    display: block;
+    font-size: 1rem;
+    border: solid 2px var(--primarycolor);
+    border-radius: 4px;
+    padding: .75rem;
+    color: var(--primarycolor);
+    width: 100%;
+    max-width: 20rem;
+    background-color: var(--mainbackgroundcolor);
+}
+
+form div label.sbs{
+    display: block;
+    padding: .75rem 0;
+    color: var(--primarycolor);
+	font-size: 0.9rem;
+}
+
+form input.submitBtn{
+    border: none;
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+    border-radius: 0.5rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 0 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-left: var(--primarycolor) solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+/* Selector rules */
+
+
+/*the container must be positioned relative:*/
+.custom-select{
+	position: relative;
+}
+  
+.custom-select select {
+	display: none; /*hide original SELECT element:*/
+}
+  
+.select-selected {
+	background-color: var(--mainbackgroundcolor);
+	margin-bottom: 0.5rem;
+}
+  
+/*style the arrow inside the select element:*/
+.select-selected:after {
+	position: absolute;
+	content: "";
+	top: 2rem;
+	right: 4rem;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: var(--primarycolor) transparent transparent transparent;
+}
+  
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent var(--primarycolor) transparent;
+	top: 2rem;
+
+}
+
+/*style items (options):*/
+.select-items {
+	position: absolute;
+	background-color: var(--mainbackgroundcolor);
+	border: 3px solid var(--primarycolor);
+	border-radius: 3px;
+	top: 110%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	padding: 0.5rem;
+}
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+	display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+	background-color: rgba(0, 0, 0, 0.1);
+  }

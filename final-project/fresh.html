@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="author" content="Roberto Uriona" />
+        <meta name="description"
+          content="Bountiful Foods" />
+        <link href="images/favicon.ico" rel="icon" > 
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+        <link href="styles/normalize.css" rel="stylesheet">
+        <link href="styles/small.css" rel="stylesheet">
+        <link href="styles/medium.css" rel="stylesheet">
+        <link href="styles/large.css" rel="stylesheet">        
+        <title>Site Purpose | Bountiful Foods - Fresh</title>
+    </head>
+    <body>             
+        <header class="limited">
+            <div>                
+                <img class="logo" src="images/logo.png" alt="Bountiful Foods">                
+                <h1>Bountiful Foods</h1>                                           
+                <button id="hamburgerBtn">
+                    <span>&#9776; </span>
+                    <span>X</span>
+                </button>
+                <nav>
+                    <ul id="primaryNav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="fresh.html">Fresh</a></li>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="index.html">Resource Attribution</a></li>
+                    </ul>
+                </nav>
+                <section id="sectionDate">                    
+                    <span id="currentDate"></span>                
+                </section>
+            </div>                         
+        </header>            
+        <main class="limited">
+            <h1>Build Your Specialty Drink</h1>    
+            <form method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top">First Name* <input type="text" name="fname" required></label>
+                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Pick the fruits</legend>
+                    <label class="top">1st Fruit Option</label>
+                    <div class="custom-select">
+                    <select>
+                        <option value="0">Select fruit:</option>
+                        <option value="1">Audi</option>
+                        <option value="2">BMW</option>
+                        <option value="3">Citroen</option>
+                        <option value="4">Ford</option>
+                        <option value="5">Honda</option>
+                        <option value="6">Jaguar</option>
+                        <option value="7">Land Rover</option>
+                        <option value="8">Mercedes</option>
+                        <option value="9">Mini</option>
+                        <option value="10">Nissan</option>
+                        <option value="11">Toyota</option>
+                        <option value="12">Volvo</option>
+                    </select>
+                    </div>
+                    <label class="top">Business Name Title* <input type="text" name="bntitle" required></label>
+                    <label class="top">Business Description <textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false"></textarea></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <div>                            
+                        <label class="sbs">
+                            <input type="radio" name="mlevel" value="NP">
+                            NP Membership
+                        </label>
+                        <label class="sbs">
+                            <input type="radio" name="mlevel" value="Bronze"> 
+                            Bronze Membership</label>
+                        <label class="sbs">
+                            <input type="radio" name="mlevel" value="Silver"> 
+                            Silver Membership
+                        </label>
+                        <label class="sbs">
+                            <input type="radio" name="mlevel" value="Gold"> 
+                            Gold Membership
+                        </label>                                                     
+                    </div>                        
+                </fieldset>
+                <input type="hidden" id="currentHiddenDate" name="last-modified" value="currentDateTime"/>
+                <input type="submit" value="Purchase My Membership" class="submitBtn">
+                
+            </form>       
+        </main>
+        <footer class="limited">
+            <div>
+                <img class="logo" src="images/logo.png" alt="Bountiful Foods">                                  
+                <h1>Bountiful Foods</h1>
+                <h2>                                        
+                    bountiful.foods@gmail.com
+                    <br/>
+                    +(591) 722-56544
+                    <br/>
+                    Location Map
+                </h2>
+                <div id="social-icon-area">
+                    <section class="social" id="facebook-icon">
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="images/facebook.png" alt="facebook icon">
+                        </a>
+                    </section>
+                    <section class="social" id="twitter-icon">
+                        <a href="https://twitter.com/" target="_blank">
+                            <img src="images/twitter.png" alt="twitter icon">
+                        </a>
+                    </section>
+                    <section class="social" id="linkedin-icon">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <img src="images/linkedin.png" alt="linkedin icon">
+                        </a>
+                    </section>
+                </div>                                        
+                <section id="small">    
+                    &copy; <span id="copyrightYear"></span> Bountiful Foods. All Rights Reserved.
+                </section>
+            </div>
+        </footer>    
+        <script src="scripts/custom-select.js"></script>
+        <script src="scripts/weather.js"></script>
+    </body>
+</html>
