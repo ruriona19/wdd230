@@ -436,6 +436,9 @@ main h1{
 
 form {
 	margin: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 form fieldset{
@@ -444,6 +447,7 @@ form fieldset{
     border-radius: 10px;
 	background-color: var(--secondarycolor);
     padding: .5rem;
+	width: 100%
 }
 
 
@@ -460,6 +464,7 @@ form label.top, form div {
     color: var(--primarycolor);
     font-size: .8rem;
 	font-weight: 700;
+	
 }
 
 form label.top input, form label.top select, form label.top textarea, form #first-opt, .select-selected{
@@ -470,7 +475,6 @@ form label.top input, form label.top select, form label.top textarea, form #firs
     padding: .75rem;
     color: var(--primarycolor);
     width: 100%;
-    max-width: 20rem;
     background-color: var(--mainbackgroundcolor);
 }
 
@@ -514,7 +518,6 @@ form label.top input:required:valid {
   
 .select-selected {
 	background-color: var(--mainbackgroundcolor);
-	margin-bottom: 0.5rem;
 }
   
 /*style the arrow inside the select element:*/
@@ -522,7 +525,7 @@ form label.top input:required:valid {
 	position: absolute;
 	content: "";
 	top: 2rem;
-	right: 4rem;
+	right: 3%;
 	width: 0;
 	height: 0;
 	border: 6px solid transparent;
@@ -533,14 +536,13 @@ form label.top input:required:valid {
 .select-selected.select-arrow-active:after {
 	border-color: transparent transparent var(--primarycolor) transparent;
 	top: 2rem;
-
 }
 
 /*style items (options):*/
 .select-items {
 	position: absolute;
 	background-color: var(--mainbackgroundcolor);
-	border: 3px solid var(--primarycolor);
+	border: 1px solid var(--primarycolor);
 	border-radius: 3px;
 	top: 110%;
 	left: 0;

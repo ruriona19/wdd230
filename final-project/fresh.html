@@ -39,7 +39,7 @@
         </header>            
         <main class="limited">
             <h1>Build Your Specialty Drink</h1>    
-            <form method="get" action="thankyou.html">
+            <form method="get" action="fresh.html">
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label class="top">First Name* <input type="text" name="fname" required></label>
@@ -50,40 +50,19 @@
                     <legend>Pick three fruits</legend>
                     <div class="custom-select">
                         <select id="fruit-opt1">
-                            <option value="0">Select fruit option:</option>
-                            <option value="1">Apple</option>
-                            <option value="2">Apricot</option>
-                            <option value="3">Avocado</option>
-                            <option value="4">Banana</option>
-                            <option value="5">Blackberry</option>
-                            <option value="6">Blueberry</option>
                         </select>
                     </div>
                     <div class="custom-select">
-                        <select id="fruit-opt2">
-                            <option value="0">Select fruit option:</option>
-                            <option value="1">Apple</option>
-                            <option value="2">Apricot</option>
-                            <option value="3">Avocado</option>
-                            <option value="4">Banana</option>
-                            <option value="5">Blackberry</option>
-                            <option value="6">Blueberry</option>
+                        <select id="fruit-opt2">   
                         </select>
                     </div>
                     <div class="custom-select">
                         <select id="fruit-opt3">
-                            <option value="0">Select fruit option:</option>
-                            <option value="1">Apple</option>
-                            <option value="2">Apricot</option>
-                            <option value="3">Avocado</option>
-                            <option value="4">Banana</option>
-                            <option value="5">Blackberry</option>
-                            <option value="6">Blueberry</option>
                         </select>
                     </div>
                     <label class="top">Special Instructions<textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false"></textarea></label>
                 </fieldset>
-                <input type="submit" value="Save My Special Drink" class="submitBtn">            
+                <input type="submit" value="Save My Special Drink" class="submitBtn" onclick="interactWithLS()">            
             </form>       
         </main>
         <footer class="limited">
@@ -119,7 +98,7 @@
                 </section>
             </div>
         </footer>    
+        <script src="scripts/build-output-area.js"></script>
         <script src="scripts/my-scripts.js"></script>
-        <script src="scripts/custom-select.js"></script>
     </body>
 </html>

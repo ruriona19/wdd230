@@ -251,4 +251,9 @@
         width: 4rem;
     }
 
+    /* Fresh page */
+    form{
+        margin: 0 7%;
+    }
+
 } /* end of media query */
