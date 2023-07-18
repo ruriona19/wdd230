@@ -1,5 +1,15 @@
-async function interactWithLS(){
+/*https://jsfiddle.net/EZVbj/1/*/
+function formatAMPM() {
+  var d = new Date(),
+      minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+      hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+      ampm = d.getHours() >= 12 ? 'pm' : 'am',
+      months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' '+hours+':'+minutes+ampm;
+}
 
+async function interactWithLS(){
     const response = await fetch('json/fruit.json');
     const fruitsData = await response.json();
 
@@ -7,28 +17,76 @@ async function interactWithLS(){
     let fruit1 = document.getElementById("fruit-opt1").value;
     let fruit2 = document.getElementById("fruit-opt2").value;
     let fruit3 = document.getElementById("fruit-opt3").value;
+    let fname = document.getElementById("fname").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
 
-    // Storing data to local storage
-    let fruitOpt1 = localStorage.setItem("fruit1",fruit1);
-    let fruitOpt2 = localStorage.setItem("fruit2",fruit2);
-    let fruitOpt3 = localStorage.setItem("fruit3",fruit3);
-
-    // Retreiving stored data
+    /*// Retreiving stored data
     let lsFruit1 = localStorage.getItem("fruit1",fruit1);
     let lsFruit2 = localStorage.getItem("fruit2",fruit2);
-    let lsFruit3 = localStorage.getItem("fruit3",fruit3);
+    let lsFruit3 = localStorage.getItem("fruit3",fruit3);*/
 
-    // Get total amount of carbohydrates
+    // Get total amount of fruit nutritions from fruit.json
+    let totalCarbs = 0;
+    let totalProteins = 0;
+    let totalFat = 0;
+    let totalCalories = 0;
+    let totalSugar = 0;
+    let currentCarb;
+
     fruitsData.forEach(fruit => {
         console.log(fruit.nutritions.carbohydrates)
-        if (fruit.name == lsFruit1) {
-            console.log(fruit.nutritions.carbohydrates);
-            localStorage.setItem("fruit1Carbo",fruit.nutritions.carbohydrates);
-            debugger
-        }
-       
+        if (fruit.name == fruit1 || fruit.name == fruit2 || fruit.name == fruit3) {
+            currentCarb = fruit.nutritions.carbohydrates;
+            currentProtein = fruit.nutritions.protein;
+            currentFat = fruit.nutritions.fat;
+            currentCalories = fruit.nutritions.calories;
+            currentSugar = fruit.nutritions.sugar;
+            totalCarbs += currentCarb;
+            totalProteins += currentProtein;
+            totalFat += currentFat;
+            totalCalories += currentCalories;
+            totalSugar += currentSugar;
+        }       
     });
-    debugger
+
+    // Get current date
+    const orderDate = formatAMPM();
+    let drinkData = localStorage.getItem("drinksData", drinksData);
+    let drinksData = [];
+    localStorage.setItem("drinksData", JSON.stringify(drinksData));
+    
+    let drink = {
+      "fname": fname,
+      "email": email,
+      "phone": phone,
+      "orderDate": orderDate,
+      "fruit1": fruit1,
+      "fruit2": fruit2,
+      "fruit3": fruit3,
+      "totalCarbs": totalCarbs,
+      "totalProteins": totalProteins,
+      "totalFat": totalFat,
+      "totalCalories": totalCalories,
+      "totalSugar": totalSugar, 
+    };
+
+    drinksData.push(drink);
+
+    // Storing data to local storage
+    localStorage.setItem("fruit1",fruit1);
+    localStorage.setItem("fruit2",fruit2);
+    localStorage.setItem("fruit3",fruit3);
+    localStorage.setItem("totalCarbs", totalCarbs);
+    localStorage.setItem("totalProteins", totalProteins);
+    localStorage.setItem("totalFat", totalFat);
+    localStorage.setItem("totalCalories", totalCalories);
+    localStorage.setItem("totalSugar", totalSugar);
+    localStorage.setItem("fname", fname);
+    localStorage.setItem("email", email);
+    localStorage.setItem("phone", phone);
+    localStorage.setItem("orderDate", orderDate);
+    localStorage.setItem("drink", JSON.stringify(drinksData));
 }
 
 const fruitsDataPath = 'json/fruit.json';
