@@ -20,6 +20,9 @@ const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 
 currentDate.textContent = fulldate;
 
+/* Get last updated date */
+let lastUpdated1 = new Date(document.lastModified). toLocaleString();
+document.getElementById("lastUpdatedSmall").innerHTML = lastUpdated1;
 
 // lazy load*/
 
