@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="author" content="Roberto Uriona" />
         <meta name="description"
-          content="Bountiful Foods" />
+          content="Bountiful Foods." />
         <link href="images/favicon.ico" rel="icon" > 
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
         <link href="styles/normalize.css" rel="stylesheet">
         <link href="styles/small.css" rel="stylesheet">
         <link href="styles/medium.css" rel="stylesheet">
         <link href="styles/large.css" rel="stylesheet">        
-        <title>Site Purpose | Bountiful Foods - Fresh</title>
+        <title>About Us Page | Bountiful foods</title>
     </head>
     <body>             
         <header class="limited">
@@ -27,8 +27,8 @@
                 <nav>
                     <ul id="primaryNav">
                         <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="fresh.html">Fresh</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="fresh.html">Fresh</a></li>
+                        <li class="active"><a href="about-us.html">About Us</a></li>
                         <li><a href="index.html">Resource Attribution</a></li>
                     </ul>
                 </nav>
@@ -36,41 +36,24 @@
                     <span id="currentDate"></span>                
                 </section>
             </div>                         
-        </header>            
+        </header>              
         <main class="limited">
-            <h1 id="build-speciality-title">Build Your Specialty Drink</h1>    
-            <form method="get">
-                <fieldset id="personal-info">
-                    <legend>Personal Information</legend>
-                    <label class="top">First Name* <input type="text" id="fname" name="fname" required></label>
-                    <label class="top">Email* <input type="email" id="email" name="email" placeholder="someone@gmail.com" required></label>
-                    <label class="top">Phone* <input type="tel" id="phone" name="phone" placeholder="1235551234" required></label>
-                </fieldset>
-                <fieldset id="pick-fruits">
-                    <legend>Pick three fruits</legend>
-                    <div class="custom-select">
-                        <select id="fruit-opt1" required>
-                        </select>
-                    </div>
-                    <div class="custom-select">
-                        <select id="fruit-opt2" required>   
-                        </select>
-                    </div>
-                    <div class="custom-select">
-                        <select id="fruit-opt3" required>
-                        </select>
-                    </div>
-                    <label class="top">Special Instructions<textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false" required></textarea></label>
-                </fieldset>
-                <input id="submitBtn" type="submit" value="Save My Special Drink" class="submitBtn" onclick="interactWithLS(); return false">   
-                <div id="outpt-area">
-                    <h2>Specialty Drink Saved</h2>
-                    <fieldset>
-                        <legend>Summary</legend>
-                    </fieldset>
-                </div>         
-            </form>       
-        </main>
+                <div id="aboutUsTitle">
+                    <h1>About Us</h1> 
+                    <h3>At Bountiful Foods, we use less water and less land than traditional agriculture. The perfect environmental greenhouse conditions ensures the highest possible nutritional value and taste. Our sustainable, root-on, living product results in less environmental impacts, carbon footprint, and less waste.</h3>
+                    <h3>Over the last 10 years, Bountiful Foods farm has helped protect the lands that give us all so much.
+
+                        We are commited to creating cascading change for the last 10 years and for the next years to come.</h3>   
+                </div>
+                <div id="visit-us">                        
+                    <h2>Visit US</h2>
+                    <p>Bountiful Foods</p>
+                    <p>258 Beech Ave, Carlsbad, CA 92008</p>
+                    <p>+(591) 722-56544</p>
+                    <p>Monday - Friday: 8:00 AM to 4:00 PM</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3340.007536348923!2d-117.353872!3d33.161429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDA5JzQxLjEiTiAxMTfCsDIxJzEzLjkiVw!5e0!3m2!1sen!2sbo!4v1689829374577!5m2!1sen!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>             
+        </main>       
         <footer class="limited">
             <div>
                 <img class="logo" src="images/logo.png" alt="Bountiful Foods">                                  
@@ -103,8 +86,7 @@
                     &copy; <span id="copyrightYear"></span> Bountiful Foods. All Rights Reserved.
                 </section>
             </div>
-        </footer>    
-        <script src="scripts/build-output-area.js"></script>
-        <script src="scripts/my-scripts.js"></script>
+        </footer> 
+        <script src="scripts/my-scripts.js"></script>   
     </body>
 </html>

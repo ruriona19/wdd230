@@ -562,3 +562,20 @@ form #outpt-area{
 .select-items div:hover, .same-as-selected {
 	background-color: rgba(0, 0, 0, 0.1);
 }
+
+/* About Us page*/
+#aboutUsTitle h3{
+	margin: 2rem;
+	font-weight: 300;
+	text-align: center;
+}
+
+#visit-us{
+	margin: 2rem;
+	text-align: center;
+	color: var(--primarycolor);
+}
+
+#visit-us iframe{
+	width: 90%;
+}
