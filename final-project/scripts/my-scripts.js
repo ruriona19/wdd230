@@ -58,36 +58,26 @@ if ("IntersectionObserver" in window) {
     });
   }
 
-/*// Get the number of days between visits
-
-// Get the number of milliseconds in one day = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
-const dayToMilliseconds = 86400000;
-
-// initialize display elements
-const daysFromLastVisit = document.querySelector(".daysFromLastVisit");
-
-// Get the number of milliseconds elapsed since the epoch
-const msElapsedSinceEpoch = Date.now();
-
-// Get the stored VALUE for the msFromLastVisit-ls KEY 
-let msFromLastVisit = Number(window.localStorage.getItem("msFromLastVisit-ls")) || msElapsedSinceEpoch;
-
-// Time elapsed in ms between last visit and today
-let msElapsed = msElapsedSinceEpoch - msFromLastVisit;
-
-msLastVisit = msElapsedSinceEpoch;
-
-// Get number of days since last visit
-let daysElapsed = Math.round(msElapsed / dayToMilliseconds);
-
-// Determine if this is the first visit.
-if (daysFromLastVisit !== null) {
-  if (msElapsed !== 0) {
-    daysFromLastVisit.textContent = daysElapsed;
-  } else {
-    daysFromLastVisit.textContent = `Welcome! This is your first visit.`;
+  // Retrieve the object from the storage
+  let drink = JSON.parse(localStorage.getItem("drink"));
+  if (drink == null || drink === 'undefined') {
+   
+    document.querySelector(`#special-drinks`).innerHTML = `<h2>Your Specialitty Drink</h2>
+                                                          <p>Go to Fresh page to build your speciality drink!<\p>`
+  }else{
+    document.querySelector(`#special-drinks`).innerHTML = `<h2>Your Specialitty Drink</h2>
+                                                          <p><strong>Name</strong>: ${drink[0].fname}</p>
+                                                                <p><strong>Email</strong>: ${drink[0].email}</p>
+                                                                <p><strong>Phone</strong>: ${drink[0].phone}</p>
+                                                                <p><strong>Fruit 1</strong>: ${drink[0].fruit1}</p>
+                                                                <p><strong>Fruit 2</strong>: ${drink[0].fruit2}</p>
+                                                                <p><strong>Fruit 3</strong>: ${drink[0].fruit3}</p>
+                                                                <p><strong>Calories</strong>: ${drink[0].totalCalories}</p>
+                                                                <p><strong>Carbs</strong>: ${drink[0].totalCarbs}</p>
+                                                                <p><strong>Fat</strong>: ${drink[0].totalFat}</p>
+                                                                <p><strong>Proteins</strong>: ${drink[0].totalProteins}</p>
+                                                                <p><strong>Sugar</strong>: ${drink[0].totalSugar}</p>
+                                                                <p><strong>Instructions</strong>: ${drink[0].instructions}</p>
+                                                                <p><strong>Order Date</strong>: ${drink[0].orderDate}</p>`
   }
-}
-
-// Store the new msFromLastVisit into localStorage
-localStorage.setItem("msFromLastVisit-ls", msLastVisit);*/
+  

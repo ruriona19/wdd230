@@ -214,7 +214,7 @@ main .hero a{
 	align-content: center;	
 }
 
-main #coastal-area, main #weather{
+main #coastal-area, main #weather, main #special-drinks{
 	background-color: var(--sectioncolor);
 	text-align: center;	
 	margin-left: 0.5rem;
