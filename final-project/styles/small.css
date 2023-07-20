@@ -504,8 +504,11 @@ form label.top input:required:valid {
     border-left: green solid 6px;
 }
 
-/* Selector rules */
+form #outpt-area{
+	display:none;
+}
 
+/* Selector rules */
 
 /*the container must be positioned relative:*/
 .custom-select{
@@ -551,11 +554,11 @@ form label.top input:required:valid {
 	padding: 0.5rem;
 }
   
-  /*hide the items when the select box is closed:*/
-  .select-hide {
+/*hide the items when the select box is closed:*/
+.select-hide {
 	display: none;
-  }
+}
   
-  .select-items div:hover, .same-as-selected {
+.select-items div:hover, .same-as-selected {
 	background-color: rgba(0, 0, 0, 0.1);
-  }
+}

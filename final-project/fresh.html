@@ -38,31 +38,37 @@
             </div>                         
         </header>            
         <main class="limited">
-            <h1>Build Your Specialty Drink</h1>    
-            <form method="get" action="fresh.html">
-                <fieldset>
+            <h1 id="build-speciality-title">Build Your Specialty Drink</h1>    
+            <form method="get">
+                <fieldset id="personal-info">
                     <legend>Personal Information</legend>
                     <label class="top">First Name* <input type="text" id="fname" name="fname" required></label>
                     <label class="top">Email* <input type="email" id="email" name="email" placeholder="someone@gmail.com" required></label>
                     <label class="top">Phone* <input type="tel" id="phone" name="phone" placeholder="1235551234" required></label>
                 </fieldset>
-                <fieldset>
+                <fieldset id="pick-fruits">
                     <legend>Pick three fruits</legend>
                     <div class="custom-select">
-                        <select id="fruit-opt1">
+                        <select id="fruit-opt1" required>
                         </select>
                     </div>
                     <div class="custom-select">
-                        <select id="fruit-opt2">   
+                        <select id="fruit-opt2" required>   
                         </select>
                     </div>
                     <div class="custom-select">
-                        <select id="fruit-opt3">
+                        <select id="fruit-opt3" required>
                         </select>
                     </div>
-                    <label class="top">Special Instructions<textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false"></textarea></label>
+                    <label class="top">Special Instructions<textarea rows="4" cols="50" name="bdescription" id="bdescription" spellcheck="false" required></textarea></label>
                 </fieldset>
-                <input type="submit" value="Save My Special Drink" class="submitBtn" onclick="interactWithLS()">            
+                <input id="submitBtn" type="submit" value="Save My Special Drink" class="submitBtn" onclick="interactWithLS(); return false">   
+                <div id="outpt-area">
+                    <h2>Specialty Drink Saved</h2>
+                    <fieldset>
+                        <legend>Summary</legend>
+                    </fieldset>
+                </div>         
             </form>       
         </main>
         <footer class="limited">

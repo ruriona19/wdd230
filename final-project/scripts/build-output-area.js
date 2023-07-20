@@ -1,5 +1,29 @@
-/*https://jsfiddle.net/EZVbj/1/*/
-function formatAMPM() {
+
+function populateOutputArea(drink){
+  document.getElementById('build-speciality-title').hidden = true;
+  document.getElementById('personal-info').hidden = true;
+  document.getElementById('pick-fruits').hidden = true;
+  document.getElementById('submitBtn').hidden = true;
+  document. getElementById("outpt-area").style.display = "block";
+   
+  document.querySelector(`#outpt-area > fieldset`).innerHTML = `<p><strong>Name</strong>: ${drink.fname}</p>
+                                                                <p><strong>Email</strong>: ${drink.email}</p>
+                                                                <p><strong>Phone</strong>: ${drink.phone}</p>
+                                                                <p><strong>Fruit 1</strong>: ${drink.fruit1}</p>
+                                                                <p><strong>Fruit 2</strong>: ${drink.fruit2}</p>
+                                                                <p><strong>Fruit 3</strong>: ${drink.fruit3}</p>
+                                                                <p><strong>Calories</strong>: ${drink.totalCalories}</p>
+                                                                <p><strong>Carbs</strong>: ${drink.totalCarbs}</p>
+                                                                <p><strong>Fat</strong>: ${drink.totalFat}</p>
+                                                                <p><strong>Proteins</strong>: ${drink.totalProteins}</p>
+                                                                <p><strong>Sugar</strong>: ${drink.totalSugar}</p>
+                                                                <p><strong>Instructions</strong>: ${drink.instructions}</p>
+                                                                <p><strong>Order Date</strong>: ${drink.orderDate}</p>
+                                                                `
+}
+
+/*I have borrowed the formatAMPM function from the following url https://jsfiddle.net/EZVbj/1/*/
+function formatAMPM() { 
   var d = new Date(),
       minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
       hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
@@ -10,9 +34,8 @@ function formatAMPM() {
 }
 
 async function interactWithLS(){
-    const response = await fetch('json/fruit.json');
-    const fruitsData = await response.json();
-
+    const response2 = await fetch('json/fruit.json');
+    const fruitsData2 = await response2.json();
     // Retrieving data from Form
     let fruit1 = document.getElementById("fruit-opt1").value;
     let fruit2 = document.getElementById("fruit-opt2").value;
@@ -20,11 +43,7 @@ async function interactWithLS(){
     let fname = document.getElementById("fname").value;
     let email = document.getElementById("email").value;
     let phone = document.getElementById("phone").value;
-
-    /*// Retreiving stored data
-    let lsFruit1 = localStorage.getItem("fruit1",fruit1);
-    let lsFruit2 = localStorage.getItem("fruit2",fruit2);
-    let lsFruit3 = localStorage.getItem("fruit3",fruit3);*/
+    let instructions = document.getElementById("bdescription").value;
 
     // Get total amount of fruit nutritions from fruit.json
     let totalCarbs = 0;
@@ -34,8 +53,8 @@ async function interactWithLS(){
     let totalSugar = 0;
     let currentCarb;
 
-    fruitsData.forEach(fruit => {
-        console.log(fruit.nutritions.carbohydrates)
+    fruitsData2.forEach(fruit => {
+        
         if (fruit.name == fruit1 || fruit.name == fruit2 || fruit.name == fruit3) {
             currentCarb = fruit.nutritions.carbohydrates;
             currentProtein = fruit.nutritions.protein;
@@ -52,7 +71,6 @@ async function interactWithLS(){
 
     // Get current date
     const orderDate = formatAMPM();
-    let drinkData = localStorage.getItem("drinksData", drinksData);
     let drinksData = [];
     localStorage.setItem("drinksData", JSON.stringify(drinksData));
     
@@ -68,25 +86,16 @@ async function interactWithLS(){
       "totalProteins": totalProteins,
       "totalFat": totalFat,
       "totalCalories": totalCalories,
-      "totalSugar": totalSugar, 
+      "totalSugar": totalSugar,
+      "instructions": instructions 
     };
 
     drinksData.push(drink);
-
     // Storing data to local storage
-    localStorage.setItem("fruit1",fruit1);
-    localStorage.setItem("fruit2",fruit2);
-    localStorage.setItem("fruit3",fruit3);
-    localStorage.setItem("totalCarbs", totalCarbs);
-    localStorage.setItem("totalProteins", totalProteins);
-    localStorage.setItem("totalFat", totalFat);
-    localStorage.setItem("totalCalories", totalCalories);
-    localStorage.setItem("totalSugar", totalSugar);
-    localStorage.setItem("fname", fname);
-    localStorage.setItem("email", email);
-    localStorage.setItem("phone", phone);
-    localStorage.setItem("orderDate", orderDate);
     localStorage.setItem("drink", JSON.stringify(drinksData));
+
+    // Retrieving data to be displayed in the output area
+    populateOutputArea(drink);
 }
 
 const fruitsDataPath = 'json/fruit.json';
@@ -95,7 +104,6 @@ const fruitsDataPath = 'json/fruit.json';
 async function getFruitsData() {
     const response = await fetch(fruitsDataPath);
     const fruitsData = await response.json();
-    console.log(fruitsData);
 
     let selectFruitOpt1 = document.getElementById("fruit-opt1");
     let selectFruitOpt2 = document.getElementById("fruit-opt2");
@@ -126,6 +134,9 @@ getFruitsData().then(() => {
 
 
 /*--------------Build custom select element-------------------*/
+/* I have modified the code located in the below url to implement my custom select field
+https://www.w3schools.com/howto/howto_custom_select.asp*/
+
 
 function checkAllSelect(){
     let x1, i, j, l, ll, selElmnt, a, b, c;
